@@ -1,0 +1,820 @@
+{
+    "metadata": {
+        "dbt_schema_version": "https://schemas.getdbt.com/dbt/catalog/v1.json",
+        "dbt_version": "1.4.1",
+        "generated_at": "2023-02-23T09:02:34.985926Z",
+        "invocation_id": "1301565f-e5c0-4d56-8be3-545e4fc2db32",
+        "env": {
+            "DBT_CLOUD_PROJECT_ID": "203642",
+            "DBT_CLOUD_RUN_ID": "125024371",
+            "DBT_CLOUD_JOB_ID": "207580",
+            "DBT_CLOUD_RUN_REASON": "Kicked off from UI by oliver.thomsen@intellishore.dk",
+            "DBT_CLOUD_RUN_REASON_CATEGORY": "other"
+        }
+    },
+    "nodes": {
+        "model.intellishore.dim_customers": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "DWH_DATAMARTS",
+                "name": "DIM_CUSTOMERS",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "DBT_TRAINING"
+            },
+            "columns": {
+                "CUSTOMER_ID": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "CUSTOMER_ID",
+                    "comment": null
+                },
+                "FIRST_NAME": {
+                    "type": "TEXT",
+                    "index": 2,
+                    "name": "FIRST_NAME",
+                    "comment": null
+                },
+                "LAST_NAME": {
+                    "type": "TEXT",
+                    "index": 3,
+                    "name": "LAST_NAME",
+                    "comment": null
+                },
+                "FIRST_ORDER_DATE": {
+                    "type": "DATE",
+                    "index": 4,
+                    "name": "FIRST_ORDER_DATE",
+                    "comment": null
+                },
+                "MOST_RECENT_ORDER_DATE": {
+                    "type": "DATE",
+                    "index": 5,
+                    "name": "MOST_RECENT_ORDER_DATE",
+                    "comment": null
+                },
+                "NUMBER_OF_ORDERS": {
+                    "type": "NUMBER",
+                    "index": 6,
+                    "name": "NUMBER_OF_ORDERS",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "last_modified": {
+                    "id": "last_modified",
+                    "label": "Last Modified",
+                    "value": "2023-02-23 09:02UTC",
+                    "include": true,
+                    "description": "The timestamp for last update/change"
+                },
+                "bytes": {
+                    "id": "bytes",
+                    "label": "Approximate Size",
+                    "value": 3584.0,
+                    "include": true,
+                    "description": "Approximate size of the table as reported by Snowflake"
+                },
+                "row_count": {
+                    "id": "row_count",
+                    "label": "Row Count",
+                    "value": 100.0,
+                    "include": true,
+                    "description": "An approximate count of rows in this table"
+                },
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": true,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.intellishore.dim_customers"
+        },
+        "model.intellishore.customer_orders": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "DWH_DATAMARTS",
+                "name": "CUSTOMER_ORDERS",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "DBT_TRAINING"
+            },
+            "columns": {
+                "CUSTOMER_ID": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "CUSTOMER_ID",
+                    "comment": null
+                },
+                "NUMBER_OF_ORDERS": {
+                    "type": "NUMBER",
+                    "index": 2,
+                    "name": "NUMBER_OF_ORDERS",
+                    "comment": null
+                },
+                "FIRST_ORDER_DATE": {
+                    "type": "DATE",
+                    "index": 3,
+                    "name": "FIRST_ORDER_DATE",
+                    "comment": null
+                },
+                "MOST_RECENT_ORDER_DATE": {
+                    "type": "DATE",
+                    "index": 4,
+                    "name": "MOST_RECENT_ORDER_DATE",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "last_modified": {
+                    "id": "last_modified",
+                    "label": "Last Modified",
+                    "value": "2023-02-23 09:02UTC",
+                    "include": true,
+                    "description": "The timestamp for last update/change"
+                },
+                "bytes": {
+                    "id": "bytes",
+                    "label": "Approximate Size",
+                    "value": 2048.0,
+                    "include": true,
+                    "description": "Approximate size of the table as reported by Snowflake"
+                },
+                "row_count": {
+                    "id": "row_count",
+                    "label": "Row Count",
+                    "value": 62.0,
+                    "include": true,
+                    "description": "An approximate count of rows in this table"
+                },
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": true,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.intellishore.customer_orders"
+        },
+        "model.intellishore.view_python_model": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "DWH_DATAMARTS",
+                "name": "VIEW_PYTHON_MODEL",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "DBT_TRAINING"
+            },
+            "columns": {
+                "CUSTOMER_ID": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "CUSTOMER_ID",
+                    "comment": null
+                },
+                "NUMBER_OF_ORDERS": {
+                    "type": "NUMBER",
+                    "index": 2,
+                    "name": "NUMBER_OF_ORDERS",
+                    "comment": null
+                },
+                "FIRST_ORDER_DATE": {
+                    "type": "DATE",
+                    "index": 3,
+                    "name": "FIRST_ORDER_DATE",
+                    "comment": null
+                },
+                "MOST_RECENT_ORDER_DATE": {
+                    "type": "DATE",
+                    "index": 4,
+                    "name": "MOST_RECENT_ORDER_DATE",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.intellishore.view_python_model"
+        },
+        "model.intellishore.stg_payments": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "DWH_DATAMARTS",
+                "name": "STG_PAYMENTS",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "DBT_TRAINING"
+            },
+            "columns": {
+                "PAYMENT_ID": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "PAYMENT_ID",
+                    "comment": null
+                },
+                "ORDER_ID": {
+                    "type": "NUMBER",
+                    "index": 2,
+                    "name": "ORDER_ID",
+                    "comment": null
+                },
+                "PAYMENT_METHOD": {
+                    "type": "TEXT",
+                    "index": 3,
+                    "name": "PAYMENT_METHOD",
+                    "comment": null
+                },
+                "STATUS": {
+                    "type": "TEXT",
+                    "index": 4,
+                    "name": "STATUS",
+                    "comment": null
+                },
+                "AMOUNT": {
+                    "type": "NUMBER",
+                    "index": 5,
+                    "name": "AMOUNT",
+                    "comment": null
+                },
+                "CREATED_AT": {
+                    "type": "DATE",
+                    "index": 6,
+                    "name": "CREATED_AT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.intellishore.stg_payments"
+        },
+        "model.intellishore.orders_per_day": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "DWH_DATAMARTS",
+                "name": "ORDERS_PER_DAY",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "DBT_TRAINING"
+            },
+            "columns": {
+                "ORDER_DATE": {
+                    "type": "DATE",
+                    "index": 1,
+                    "name": "ORDER_DATE",
+                    "comment": null
+                },
+                "NUMBER_OF_ORDERS": {
+                    "type": "NUMBER",
+                    "index": 2,
+                    "name": "NUMBER_OF_ORDERS",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "last_modified": {
+                    "id": "last_modified",
+                    "label": "Last Modified",
+                    "value": "2023-02-23 09:02UTC",
+                    "include": true,
+                    "description": "The timestamp for last update/change"
+                },
+                "bytes": {
+                    "id": "bytes",
+                    "label": "Approximate Size",
+                    "value": 1536.0,
+                    "include": true,
+                    "description": "Approximate size of the table as reported by Snowflake"
+                },
+                "row_count": {
+                    "id": "row_count",
+                    "label": "Row Count",
+                    "value": 69.0,
+                    "include": true,
+                    "description": "An approximate count of rows in this table"
+                },
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": true,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.intellishore.orders_per_day"
+        },
+        "model.intellishore.stg_customers": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "DWH_DATAMARTS",
+                "name": "STG_CUSTOMERS",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "DBT_TRAINING"
+            },
+            "columns": {
+                "CUSTOMER_ID": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "CUSTOMER_ID",
+                    "comment": null
+                },
+                "FIRST_NAME": {
+                    "type": "TEXT",
+                    "index": 2,
+                    "name": "FIRST_NAME",
+                    "comment": null
+                },
+                "LAST_NAME": {
+                    "type": "TEXT",
+                    "index": 3,
+                    "name": "LAST_NAME",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.intellishore.stg_customers"
+        },
+        "model.intellishore.stg_orders": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "DWH_DATAMARTS",
+                "name": "STG_ORDERS",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "DBT_TRAINING"
+            },
+            "columns": {
+                "ORDER_ID": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "ORDER_ID",
+                    "comment": null
+                },
+                "CUSTOMER_ID": {
+                    "type": "NUMBER",
+                    "index": 2,
+                    "name": "CUSTOMER_ID",
+                    "comment": null
+                },
+                "ORDER_DATE": {
+                    "type": "DATE",
+                    "index": 3,
+                    "name": "ORDER_DATE",
+                    "comment": null
+                },
+                "STATUS": {
+                    "type": "TEXT",
+                    "index": 4,
+                    "name": "STATUS",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.intellishore.stg_orders"
+        },
+        "model.intellishore.my_first_dbt_model": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "DWH_DATAMARTS",
+                "name": "MY_FIRST_DBT_MODEL",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "DBT_TRAINING"
+            },
+            "columns": {
+                "ID": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "ID",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "last_modified": {
+                    "id": "last_modified",
+                    "label": "Last Modified",
+                    "value": "2023-02-23 09:02UTC",
+                    "include": true,
+                    "description": "The timestamp for last update/change"
+                },
+                "bytes": {
+                    "id": "bytes",
+                    "label": "Approximate Size",
+                    "value": 1024.0,
+                    "include": true,
+                    "description": "Approximate size of the table as reported by Snowflake"
+                },
+                "row_count": {
+                    "id": "row_count",
+                    "label": "Row Count",
+                    "value": 1.0,
+                    "include": true,
+                    "description": "An approximate count of rows in this table"
+                },
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": true,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.intellishore.my_first_dbt_model"
+        },
+        "model.intellishore.fct_orders": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "DWH_DATAMARTS",
+                "name": "FCT_ORDERS",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "DBT_TRAINING"
+            },
+            "columns": {
+                "ORDER_ID": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "ORDER_ID",
+                    "comment": null
+                },
+                "CUSTOMER_ID": {
+                    "type": "NUMBER",
+                    "index": 2,
+                    "name": "CUSTOMER_ID",
+                    "comment": null
+                },
+                "ORDER_DATE": {
+                    "type": "DATE",
+                    "index": 3,
+                    "name": "ORDER_DATE",
+                    "comment": null
+                },
+                "AMOUNT": {
+                    "type": "NUMBER",
+                    "index": 4,
+                    "name": "AMOUNT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "last_modified": {
+                    "id": "last_modified",
+                    "label": "Last Modified",
+                    "value": "2023-02-23 09:02UTC",
+                    "include": true,
+                    "description": "The timestamp for last update/change"
+                },
+                "bytes": {
+                    "id": "bytes",
+                    "label": "Approximate Size",
+                    "value": 2048.0,
+                    "include": true,
+                    "description": "Approximate size of the table as reported by Snowflake"
+                },
+                "row_count": {
+                    "id": "row_count",
+                    "label": "Row Count",
+                    "value": 99.0,
+                    "include": true,
+                    "description": "An approximate count of rows in this table"
+                },
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": true,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.intellishore.fct_orders"
+        },
+        "model.intellishore.demo_ninja_staging_loop": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "DWH_DATAMARTS",
+                "name": "DEMO_NINJA_STAGING_LOOP",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "DBT_TRAINING"
+            },
+            "columns": {
+                "CUSTOMER_ID": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "CUSTOMER_ID",
+                    "comment": null
+                },
+                "ORDER_DATE": {
+                    "type": "DATE",
+                    "index": 2,
+                    "name": "ORDER_DATE",
+                    "comment": null
+                },
+                "STATUS": {
+                    "type": "TEXT",
+                    "index": 3,
+                    "name": "STATUS",
+                    "comment": null
+                },
+                "ORDER_ID": {
+                    "type": "NUMBER",
+                    "index": 4,
+                    "name": "ORDER_ID",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.intellishore.demo_ninja_staging_loop"
+        },
+        "model.intellishore.my_second_dbt_model": {
+            "metadata": {
+                "type": "VIEW",
+                "schema": "DWH_DATAMARTS",
+                "name": "MY_SECOND_DBT_MODEL",
+                "database": "ANALYTICS",
+                "comment": null,
+                "owner": "DBT_TRAINING"
+            },
+            "columns": {
+                "ID": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "ID",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": false,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "model.intellishore.my_second_dbt_model"
+        }
+    },
+    "sources": {
+        "source.intellishore.stripe.payment": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "STRIPE",
+                "name": "PAYMENT",
+                "database": "RAW",
+                "comment": null,
+                "owner": "DBT_TRAINING"
+            },
+            "columns": {
+                "ID": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "ID",
+                    "comment": null
+                },
+                "ORDERID": {
+                    "type": "NUMBER",
+                    "index": 2,
+                    "name": "ORDERID",
+                    "comment": null
+                },
+                "PAYMENTMETHOD": {
+                    "type": "TEXT",
+                    "index": 3,
+                    "name": "PAYMENTMETHOD",
+                    "comment": null
+                },
+                "STATUS": {
+                    "type": "TEXT",
+                    "index": 4,
+                    "name": "STATUS",
+                    "comment": null
+                },
+                "AMOUNT": {
+                    "type": "NUMBER",
+                    "index": 5,
+                    "name": "AMOUNT",
+                    "comment": null
+                },
+                "CREATED": {
+                    "type": "DATE",
+                    "index": 6,
+                    "name": "CREATED",
+                    "comment": null
+                },
+                "_BATCHED_AT": {
+                    "type": "TIMESTAMP_NTZ",
+                    "index": 7,
+                    "name": "_BATCHED_AT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "last_modified": {
+                    "id": "last_modified",
+                    "label": "Last Modified",
+                    "value": "2023-01-19 09:24UTC",
+                    "include": true,
+                    "description": "The timestamp for last update/change"
+                },
+                "bytes": {
+                    "id": "bytes",
+                    "label": "Approximate Size",
+                    "value": 3584.0,
+                    "include": true,
+                    "description": "Approximate size of the table as reported by Snowflake"
+                },
+                "row_count": {
+                    "id": "row_count",
+                    "label": "Row Count",
+                    "value": 120.0,
+                    "include": true,
+                    "description": "An approximate count of rows in this table"
+                },
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": true,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "source.intellishore.stripe.payment"
+        },
+        "source.intellishore.jaffle_shop.orders": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "JAFFLE_SHOP",
+                "name": "ORDERS",
+                "database": "RAW",
+                "comment": null,
+                "owner": "DBT_TRAINING"
+            },
+            "columns": {
+                "ID": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "ID",
+                    "comment": null
+                },
+                "USER_ID": {
+                    "type": "NUMBER",
+                    "index": 2,
+                    "name": "USER_ID",
+                    "comment": null
+                },
+                "ORDER_DATE": {
+                    "type": "DATE",
+                    "index": 3,
+                    "name": "ORDER_DATE",
+                    "comment": null
+                },
+                "STATUS": {
+                    "type": "TEXT",
+                    "index": 4,
+                    "name": "STATUS",
+                    "comment": null
+                },
+                "_ETL_LOADED_AT": {
+                    "type": "TIMESTAMP_NTZ",
+                    "index": 5,
+                    "name": "_ETL_LOADED_AT",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "last_modified": {
+                    "id": "last_modified",
+                    "label": "Last Modified",
+                    "value": "2023-01-19 09:23UTC",
+                    "include": true,
+                    "description": "The timestamp for last update/change"
+                },
+                "bytes": {
+                    "id": "bytes",
+                    "label": "Approximate Size",
+                    "value": 2560.0,
+                    "include": true,
+                    "description": "Approximate size of the table as reported by Snowflake"
+                },
+                "row_count": {
+                    "id": "row_count",
+                    "label": "Row Count",
+                    "value": 99.0,
+                    "include": true,
+                    "description": "An approximate count of rows in this table"
+                },
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": true,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "source.intellishore.jaffle_shop.orders"
+        },
+        "source.intellishore.jaffle_shop.customers": {
+            "metadata": {
+                "type": "BASE TABLE",
+                "schema": "JAFFLE_SHOP",
+                "name": "CUSTOMERS",
+                "database": "RAW",
+                "comment": null,
+                "owner": "DBT_TRAINING"
+            },
+            "columns": {
+                "ID": {
+                    "type": "NUMBER",
+                    "index": 1,
+                    "name": "ID",
+                    "comment": null
+                },
+                "FIRST_NAME": {
+                    "type": "TEXT",
+                    "index": 2,
+                    "name": "FIRST_NAME",
+                    "comment": null
+                },
+                "LAST_NAME": {
+                    "type": "TEXT",
+                    "index": 3,
+                    "name": "LAST_NAME",
+                    "comment": null
+                }
+            },
+            "stats": {
+                "last_modified": {
+                    "id": "last_modified",
+                    "label": "Last Modified",
+                    "value": "2023-01-19 09:22UTC",
+                    "include": true,
+                    "description": "The timestamp for last update/change"
+                },
+                "bytes": {
+                    "id": "bytes",
+                    "label": "Approximate Size",
+                    "value": 2560.0,
+                    "include": true,
+                    "description": "Approximate size of the table as reported by Snowflake"
+                },
+                "row_count": {
+                    "id": "row_count",
+                    "label": "Row Count",
+                    "value": 100.0,
+                    "include": true,
+                    "description": "An approximate count of rows in this table"
+                },
+                "has_stats": {
+                    "id": "has_stats",
+                    "label": "Has Stats?",
+                    "value": true,
+                    "include": false,
+                    "description": "Indicates whether there are statistics for this table"
+                }
+            },
+            "unique_id": "source.intellishore.jaffle_shop.customers"
+        }
+    },
+    "errors": null
+}

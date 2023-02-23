@@ -1,0 +1,499 @@
+{
+    "metadata": {
+        "dbt_schema_version": "https://schemas.getdbt.com/dbt/run-results/v4.json",
+        "dbt_version": "1.4.1",
+        "generated_at": "2023-02-23T09:02:31.470782Z",
+        "invocation_id": "1301565f-e5c0-4d56-8be3-545e4fc2db32",
+        "env": {
+            "DBT_CLOUD_PROJECT_ID": "203642",
+            "DBT_CLOUD_RUN_ID": "125024371",
+            "DBT_CLOUD_JOB_ID": "207580",
+            "DBT_CLOUD_RUN_REASON": "Kicked off from UI by oliver.thomsen@intellishore.dk",
+            "DBT_CLOUD_RUN_REASON_CATEGORY": "other"
+        }
+    },
+    "results": [
+        {
+            "status": "success",
+            "timing": [
+                {
+                    "name": "compile",
+                    "started_at": "2023-02-23T09:02:31.225701Z",
+                    "completed_at": "2023-02-23T09:02:31.245128Z"
+                },
+                {
+                    "name": "execute",
+                    "started_at": "2023-02-23T09:02:31.248195Z",
+                    "completed_at": "2023-02-23T09:02:31.248240Z"
+                }
+            ],
+            "thread_id": "Thread-32",
+            "execution_time": 0.030528545379638672,
+            "adapter_response": {},
+            "message": null,
+            "failures": null,
+            "unique_id": "model.intellishore.stg_customers"
+        },
+        {
+            "status": "success",
+            "timing": [
+                {
+                    "name": "compile",
+                    "started_at": "2023-02-23T09:02:31.233402Z",
+                    "completed_at": "2023-02-23T09:02:31.245954Z"
+                },
+                {
+                    "name": "execute",
+                    "started_at": "2023-02-23T09:02:31.249364Z",
+                    "completed_at": "2023-02-23T09:02:31.249377Z"
+                }
+            ],
+            "thread_id": "Thread-33",
+            "execution_time": 0.03163504600524902,
+            "adapter_response": {},
+            "message": null,
+            "failures": null,
+            "unique_id": "model.intellishore.stg_orders"
+        },
+        {
+            "status": "success",
+            "timing": [
+                {
+                    "name": "compile",
+                    "started_at": "2023-02-23T09:02:31.236879Z",
+                    "completed_at": "2023-02-23T09:02:31.247011Z"
+                },
+                {
+                    "name": "execute",
+                    "started_at": "2023-02-23T09:02:31.252834Z",
+                    "completed_at": "2023-02-23T09:02:31.252851Z"
+                }
+            ],
+            "thread_id": "Thread-34",
+            "execution_time": 0.03173255920410156,
+            "adapter_response": {},
+            "message": null,
+            "failures": null,
+            "unique_id": "model.intellishore.stg_payments"
+        },
+        {
+            "status": "success",
+            "timing": [
+                {
+                    "name": "compile",
+                    "started_at": "2023-02-23T09:02:31.241764Z",
+                    "completed_at": "2023-02-23T09:02:31.247723Z"
+                },
+                {
+                    "name": "execute",
+                    "started_at": "2023-02-23T09:02:31.254102Z",
+                    "completed_at": "2023-02-23T09:02:31.254118Z"
+                }
+            ],
+            "thread_id": "Thread-31",
+            "execution_time": 0.032842159271240234,
+            "adapter_response": {},
+            "message": null,
+            "failures": null,
+            "unique_id": "model.intellishore.my_first_dbt_model"
+        },
+        {
+            "status": "success",
+            "timing": [
+                {
+                    "name": "compile",
+                    "started_at": "2023-02-23T09:02:31.279652Z",
+                    "completed_at": "2023-02-23T09:02:31.313907Z"
+                },
+                {
+                    "name": "execute",
+                    "started_at": "2023-02-23T09:02:31.324877Z",
+                    "completed_at": "2023-02-23T09:02:31.324894Z"
+                }
+            ],
+            "thread_id": "Thread-32",
+            "execution_time": 0.06719756126403809,
+            "adapter_response": {},
+            "message": null,
+            "failures": null,
+            "unique_id": "test.intellishore.unique_stg_customers_customer_id.c7614daada"
+        },
+        {
+            "status": "success",
+            "timing": [
+                {
+                    "name": "compile",
+                    "started_at": "2023-02-23T09:02:31.264363Z",
+                    "completed_at": "2023-02-23T09:02:31.319464Z"
+                },
+                {
+                    "name": "execute",
+                    "started_at": "2023-02-23T09:02:31.325312Z",
+                    "completed_at": "2023-02-23T09:02:31.325331Z"
+                }
+            ],
+            "thread_id": "Thread-33",
+            "execution_time": 0.06907129287719727,
+            "adapter_response": {},
+            "message": null,
+            "failures": null,
+            "unique_id": "test.intellishore.not_null_stg_customers_customer_id.e2cfb1f9aa"
+        },
+        {
+            "status": "success",
+            "timing": [
+                {
+                    "name": "compile",
+                    "started_at": "2023-02-23T09:02:31.292180Z",
+                    "completed_at": "2023-02-23T09:02:31.324296Z"
+                },
+                {
+                    "name": "execute",
+                    "started_at": "2023-02-23T09:02:31.329269Z",
+                    "completed_at": "2023-02-23T09:02:31.329282Z"
+                }
+            ],
+            "thread_id": "Thread-34",
+            "execution_time": 0.07062554359436035,
+            "adapter_response": {},
+            "message": null,
+            "failures": null,
+            "unique_id": "model.intellishore.customer_orders"
+        },
+        {
+            "status": "success",
+            "timing": [
+                {
+                    "name": "compile",
+                    "started_at": "2023-02-23T09:02:31.314291Z",
+                    "completed_at": "2023-02-23T09:02:31.325813Z"
+                },
+                {
+                    "name": "execute",
+                    "started_at": "2023-02-23T09:02:31.331043Z",
+                    "completed_at": "2023-02-23T09:02:31.331058Z"
+                }
+            ],
+            "thread_id": "Thread-31",
+            "execution_time": 0.07090425491333008,
+            "adapter_response": {},
+            "message": null,
+            "failures": null,
+            "unique_id": "model.intellishore.demo_ninja_staging_loop"
+        },
+        {
+            "status": "success",
+            "timing": [
+                {
+                    "name": "compile",
+                    "started_at": "2023-02-23T09:02:31.337915Z",
+                    "completed_at": "2023-02-23T09:02:31.353878Z"
+                },
+                {
+                    "name": "execute",
+                    "started_at": "2023-02-23T09:02:31.370313Z",
+                    "completed_at": "2023-02-23T09:02:31.370333Z"
+                }
+            ],
+            "thread_id": "Thread-32",
+            "execution_time": 0.040064096450805664,
+            "adapter_response": {},
+            "message": null,
+            "failures": null,
+            "unique_id": "model.intellishore.dim_customers"
+        },
+        {
+            "status": "success",
+            "timing": [
+                {
+                    "name": "compile",
+                    "started_at": "2023-02-23T09:02:31.341566Z",
+                    "completed_at": "2023-02-23T09:02:31.367989Z"
+                },
+                {
+                    "name": "execute",
+                    "started_at": "2023-02-23T09:02:31.371602Z",
+                    "completed_at": "2023-02-23T09:02:31.371617Z"
+                }
+            ],
+            "thread_id": "Thread-33",
+            "execution_time": 0.04111170768737793,
+            "adapter_response": {},
+            "message": null,
+            "failures": null,
+            "unique_id": "model.intellishore.orders_per_day"
+        },
+        {
+            "status": "success",
+            "timing": [
+                {
+                    "name": "compile",
+                    "started_at": "2023-02-23T09:02:31.348729Z",
+                    "completed_at": "2023-02-23T09:02:31.369257Z"
+                },
+                {
+                    "name": "execute",
+                    "started_at": "2023-02-23T09:02:31.373294Z",
+                    "completed_at": "2023-02-23T09:02:31.373310Z"
+                }
+            ],
+            "thread_id": "Thread-34",
+            "execution_time": 0.03852653503417969,
+            "adapter_response": {},
+            "message": null,
+            "failures": null,
+            "unique_id": "test.intellishore.accepted_values_stg_orders_status__completed__shipped__returned__placed__return_pending.8fb5b5184b"
+        },
+        {
+            "status": "success",
+            "timing": [
+                {
+                    "name": "compile",
+                    "started_at": "2023-02-23T09:02:31.361283Z",
+                    "completed_at": "2023-02-23T09:02:31.370743Z"
+                },
+                {
+                    "name": "execute",
+                    "started_at": "2023-02-23T09:02:31.375173Z",
+                    "completed_at": "2023-02-23T09:02:31.375184Z"
+                }
+            ],
+            "thread_id": "Thread-31",
+            "execution_time": 0.031238079071044922,
+            "adapter_response": {},
+            "message": null,
+            "failures": null,
+            "unique_id": "test.intellishore.not_null_stg_orders_order_id.81cfe2fe64"
+        },
+        {
+            "status": "success",
+            "timing": [
+                {
+                    "name": "compile",
+                    "started_at": "2023-02-23T09:02:31.382062Z",
+                    "completed_at": "2023-02-23T09:02:31.402267Z"
+                },
+                {
+                    "name": "execute",
+                    "started_at": "2023-02-23T09:02:31.409021Z",
+                    "completed_at": "2023-02-23T09:02:31.409036Z"
+                }
+            ],
+            "thread_id": "Thread-32",
+            "execution_time": 0.03401803970336914,
+            "adapter_response": {},
+            "message": null,
+            "failures": null,
+            "unique_id": "test.intellishore.relationships_stg_orders_customer_id__customer_id__ref_stg_customers_.430bf21500"
+        },
+        {
+            "status": "success",
+            "timing": [
+                {
+                    "name": "compile",
+                    "started_at": "2023-02-23T09:02:31.394106Z",
+                    "completed_at": "2023-02-23T09:02:31.407081Z"
+                },
+                {
+                    "name": "execute",
+                    "started_at": "2023-02-23T09:02:31.410283Z",
+                    "completed_at": "2023-02-23T09:02:31.410295Z"
+                }
+            ],
+            "thread_id": "Thread-33",
+            "execution_time": 0.03353404998779297,
+            "adapter_response": {},
+            "message": null,
+            "failures": null,
+            "unique_id": "test.intellishore.unique_stg_orders_order_id.e3b841c71a"
+        },
+        {
+            "status": "success",
+            "timing": [
+                {
+                    "name": "compile",
+                    "started_at": "2023-02-23T09:02:31.398851Z",
+                    "completed_at": "2023-02-23T09:02:31.408136Z"
+                },
+                {
+                    "name": "execute",
+                    "started_at": "2023-02-23T09:02:31.411426Z",
+                    "completed_at": "2023-02-23T09:02:31.411438Z"
+                }
+            ],
+            "thread_id": "Thread-34",
+            "execution_time": 0.03310251235961914,
+            "adapter_response": {},
+            "message": null,
+            "failures": null,
+            "unique_id": "model.intellishore.fct_orders"
+        },
+        {
+            "status": "success",
+            "timing": [
+                {
+                    "name": "compile",
+                    "started_at": "2023-02-23T09:02:31.402591Z",
+                    "completed_at": "2023-02-23T09:02:31.409684Z"
+                },
+                {
+                    "name": "execute",
+                    "started_at": "2023-02-23T09:02:31.414843Z",
+                    "completed_at": "2023-02-23T09:02:31.414858Z"
+                }
+            ],
+            "thread_id": "Thread-31",
+            "execution_time": 0.024870634078979492,
+            "adapter_response": {},
+            "message": null,
+            "failures": null,
+            "unique_id": "test.intellishore.assert_positive_total_for_payments"
+        },
+        {
+            "status": "success",
+            "timing": [
+                {
+                    "name": "compile",
+                    "started_at": "2023-02-23T09:02:31.421066Z",
+                    "completed_at": "2023-02-23T09:02:31.437441Z"
+                },
+                {
+                    "name": "execute",
+                    "started_at": "2023-02-23T09:02:31.444323Z",
+                    "completed_at": "2023-02-23T09:02:31.444337Z"
+                }
+            ],
+            "thread_id": "Thread-32",
+            "execution_time": 0.030367612838745117,
+            "adapter_response": {},
+            "message": null,
+            "failures": null,
+            "unique_id": "model.intellishore.my_second_dbt_model"
+        },
+        {
+            "status": "success",
+            "timing": [
+                {
+                    "name": "compile",
+                    "started_at": "2023-02-23T09:02:31.425543Z",
+                    "completed_at": "2023-02-23T09:02:31.442450Z"
+                },
+                {
+                    "name": "execute",
+                    "started_at": "2023-02-23T09:02:31.445596Z",
+                    "completed_at": "2023-02-23T09:02:31.445607Z"
+                }
+            ],
+            "thread_id": "Thread-33",
+            "execution_time": 0.029651165008544922,
+            "adapter_response": {},
+            "message": null,
+            "failures": null,
+            "unique_id": "test.intellishore.not_null_my_first_dbt_model_id.5fb22c2710"
+        },
+        {
+            "status": "success",
+            "timing": [
+                {
+                    "name": "compile",
+                    "started_at": "2023-02-23T09:02:31.430211Z",
+                    "completed_at": "2023-02-23T09:02:31.443459Z"
+                },
+                {
+                    "name": "execute",
+                    "started_at": "2023-02-23T09:02:31.447173Z",
+                    "completed_at": "2023-02-23T09:02:31.447189Z"
+                }
+            ],
+            "thread_id": "Thread-34",
+            "execution_time": 0.030324459075927734,
+            "adapter_response": {},
+            "message": null,
+            "failures": null,
+            "unique_id": "test.intellishore.unique_my_first_dbt_model_id.16e066b321"
+        },
+        {
+            "status": "success",
+            "timing": [
+                {
+                    "name": "compile",
+                    "started_at": "2023-02-23T09:02:31.438037Z",
+                    "completed_at": "2023-02-23T09:02:31.444741Z"
+                },
+                {
+                    "name": "execute",
+                    "started_at": "2023-02-23T09:02:31.448731Z",
+                    "completed_at": "2023-02-23T09:02:31.448746Z"
+                }
+            ],
+            "thread_id": "Thread-31",
+            "execution_time": 0.02722644805908203,
+            "adapter_response": {},
+            "message": null,
+            "failures": null,
+            "unique_id": "model.intellishore.view_python_model"
+        },
+        {
+            "status": "success",
+            "timing": [
+                {
+                    "name": "compile",
+                    "started_at": "2023-02-23T09:02:31.455003Z",
+                    "completed_at": "2023-02-23T09:02:31.465203Z"
+                },
+                {
+                    "name": "execute",
+                    "started_at": "2023-02-23T09:02:31.466560Z",
+                    "completed_at": "2023-02-23T09:02:31.466572Z"
+                }
+            ],
+            "thread_id": "Thread-32",
+            "execution_time": 0.014508724212646484,
+            "adapter_response": {},
+            "message": null,
+            "failures": null,
+            "unique_id": "test.intellishore.not_null_my_second_dbt_model_id.151b76d778"
+        },
+        {
+            "status": "success",
+            "timing": [
+                {
+                    "name": "compile",
+                    "started_at": "2023-02-23T09:02:31.460884Z",
+                    "completed_at": "2023-02-23T09:02:31.465540Z"
+                },
+                {
+                    "name": "execute",
+                    "started_at": "2023-02-23T09:02:31.466890Z",
+                    "completed_at": "2023-02-23T09:02:31.466900Z"
+                }
+            ],
+            "thread_id": "Thread-33",
+            "execution_time": 0.014572620391845703,
+            "adapter_response": {},
+            "message": null,
+            "failures": null,
+            "unique_id": "test.intellishore.unique_my_second_dbt_model_id.57a0f8c493"
+        }
+    ],
+    "elapsed_time": 1.763087511062622,
+    "args": {
+        "write_json": true,
+        "use_colors": true,
+        "printer_width": 80,
+        "version_check": true,
+        "partial_parse": true,
+        "static_parser": true,
+        "profiles_dir": "/tmp/jobs/125024371/.dbt",
+        "send_anonymous_usage_stats": true,
+        "quiet": false,
+        "no_print": false,
+        "cache_selected_only": false,
+        "profile": "user",
+        "target": "default",
+        "compile": true,
+        "which": "generate",
+        "rpc_method": "docs.generate",
+        "indirect_selection": "eager"
+    }
+}
